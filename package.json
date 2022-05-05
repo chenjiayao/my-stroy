@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "name": "my-stroy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:chenjiayao/my-stroy.git",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  },
+  "dependencies": {
+    "vuepress-theme-reco": "^1.6.11"
+  }
+}
