@@ -1,6 +1,6 @@
 ---
 title: Consul 的基本使用：服务注册和自动发现
-date: 2017-12-28
+date: 2022-04-28
 categories:
  - Consul
  - 微服务
