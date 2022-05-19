@@ -9,6 +9,7 @@
   "repository": "git@github.com:chenjiayao/my-stroy.git",
   "license": "MIT",
   "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.9.7",
     "vuepress": "^1.9.7"
   },
   "dependencies": {

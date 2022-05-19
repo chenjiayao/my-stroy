@@ -1,9 +1,16 @@
 module.exports = {
-    head: [
-        [
-            'link', { rel: 'icon', href: '/favicon.ico' }
-        ]
-    ],
+    head:[[
+        'script', {}, `
+        var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8e5d763e94778d1db7f6a7963b45400d";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+            })();
+        `,
+        'link', { rel: 'icon', href: '/favicon.ico' }
+      ]],
     title: "jaychen's stroy",
     theme: 'reco',
     themeConfig: {
