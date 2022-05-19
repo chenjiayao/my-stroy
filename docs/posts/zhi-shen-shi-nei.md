@@ -1,5 +1,5 @@
 ---
-title: 置身事内读书笔记
+title: 『置身事内』读书笔记
 date: 2022-05-16
 categories:
  - Book
