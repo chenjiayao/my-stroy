@@ -1,6 +1,18 @@
 module.exports = {
+    head: [
+        [
+            'link', { rel: 'icon', href: '/favicon.ico' }
+        ]
+    ],
+    title: "jaychen's stroy",
     theme: 'reco',
     themeConfig: {
+        logo:  './images/avatar.jpg',
+
+        authorAvatar: './images/avatar.jpg',
+        author: 'jaychen',
+        type:'blog',
+        startYear: '2022',
         lastUpdated: 'Last Updated', // string | boolean
         blogConfig: {
             category: {
@@ -9,13 +21,13 @@ module.exports = {
             }
         },
         subSidebar: 'auto',
-
         nav: [
             { text: '首页', link: '/' ,icon:'reco-home'},
+            { text: 'sidergo 系列教程', link: 'https://sidergo.jaychen.fun' ,icon:'reco-document'},
 
             { text: '时间线', link: '/timeline/', icon: 'reco-date' },
             {
-                text: 'Github', link: 'https://github.com/chenjiayao'
+                text: 'Github', link: 'https://github.com/chenjiayao',icon:'reco-github'
             }
         ]
     }
