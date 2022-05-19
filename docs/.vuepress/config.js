@@ -14,9 +14,9 @@ module.exports = {
     title: "jaychen's stroy",
     theme: 'reco',
     themeConfig: {
-        logo:  './images/avatar.jpg',
+        logo:  '/images/avatar.jpg',
 
-        authorAvatar: './images/avatar.jpg',
+        authorAvatar: '/images/avatar.jpg',
         author: 'jaychen',
         type:'blog',
         startYear: '2022',
