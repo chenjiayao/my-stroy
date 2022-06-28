@@ -16,7 +16,7 @@ publish: true
 
 限流是后台系统中常见的一个需求，最简单的是根据 IP 地址对请求频率做一个限制，使用 [time/rate](https://pkg.go.dev/golang.org/x/time/rate) 包可以很容易实现这个需求。
 
-```golang
+```go
 type IPLimit struct {
 	mutex   sync.Mutex
 	iprates map[string]*rate.Limiter
@@ -32,7 +32,7 @@ func init() {
 ```
 为了实现根据 IP 限流，需要一个 map 结构来保存 IP 和 rate.Limiter 的关系，接下来我们就一个在 middleware 中使用了：
 
-```golang
+```go
 func IPLimitRaterMiddleware(c *gin.Context) {
 
 	ip := c.ClientIP()
@@ -68,7 +68,7 @@ go 中的限速是指在使用 gin 之类的 http server 下载文件，希望�
 
 如何实现限速，这个需求看似很接近限流，但是具体事项起来却比较不好下手，这里我们先不管限速，来看看使用 gin 如何实现下载文件。
 
-```golang
+```go
 r.GET("/download_1", func(c *gin.Context) {
 		//RandStringBytesMaskImprSrc 函数可以生成一个指定大小的 []byte，这里生成的是一个 10MB 的 []byte
 		b := RandStringBytesMaskImprSrc(10 * 1024 * 1024)
@@ -80,7 +80,7 @@ r.GET("/download_1", func(c *gin.Context) {
 ```
 上面几行代码就可以实现下载功能了，请求 `/download_1` 可以下载一个 download 的文件，可以看到下载的主要逻辑是：`io.Copy(c.Writer, buf)`，`c.Writer` 为 http 请求代表的 socket，这里看到下载的本质是将流写到 `c.Writer` 中。那么如果我们现在写入的速度，就可以做到限速：
 
-```golang
+```go
 b := RandStringBytesMaskImprSrc(10 * 1024 * 1024)
 buf := bytes.NewBuffer(b)
 c.Header("Content-Length", fmt.Sprintf("%d", len(b)))
@@ -99,7 +99,7 @@ for range time.Tick(1 * time.Second) {
 
 除了使用 `time.Tick` 之外，同样也可以使用令牌桶算法来实现限速
 
-```golang
+```go
 type LimitReader struct {
 	r       io.Reader
 	limiter *rate.Limiter
@@ -136,7 +136,7 @@ func (s *LimitReader) Read(p []byte) (int, error) {
 }
 ```
 
-```golang
+```go
 r.GET("/download_2", func(c *gin.Context) {
 	b := RandStringBytesMaskImprSrc(10 * 1024 * 1024)
 	buf := bytes.NewBuffer(b)
@@ -151,3 +151,8 @@ r.GET("/download_2", func(c *gin.Context) {
 
 上面就是使用令牌桶做限速的逻辑了，这里我们对 reader 做了封装，`io.Copy` 会调用 `LimitReader` 的 `Read` 函数读取数据，这里我们在 `Read` 中使用令牌桶做了限制：如果读取速率超过令牌桶的速率，那么就会阻塞在 `WaitN`，这样就实现了限速的功能。
 
+
+
+
+
+<Vssue/>
