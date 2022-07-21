@@ -88,7 +88,7 @@ But if China is trying to send a message to smaller powers like Australia that i
 
 Dr Hsu is more convinced China does need Australia - now especially.
 
-"It's not that Australia is particularly powerful in terms of military might... but it is on potential source of energy security for eht upcoming winter," she says.
+"It's not that Australia is particularly powerful in terms of military might... but it is on potential source of energy security for the upcoming winter," she says.
 
 Last year China suffered power shortages that left millions without heating and the goverment will be looking to avoid the upset that repeat blackouts could bring.
 
@@ -96,7 +96,7 @@ With the war in Ukraine restricting energy supply even further,it colud turn to 
 
 But though warmer words  have been exchanged, other challenges have intensified.
 
-Last month, Australia accused a Chinese fighter jet of carrying out a dangerous manoeuvre near ont of its aircraft over the South China Sea.
+Last month, Australia accused a Chinese fighter jet of carrying out a dangerous manoeuvre near one of its aircraft over the South China Sea.
 
 And shortly afterwards, an Australian warship charting a course through the same international waters - which are claimed by China as its territory - was stalked by a unclear-powered submarine, a warship and multiple aircraft, the Australian Broadcasting Corporation reported.
 
