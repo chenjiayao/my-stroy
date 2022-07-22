@@ -1,10 +1,10 @@
 ---
-title: learning the fucking english 1
+title: Learning-the-fucking-English-1
 date: 2022-07-21
 categories:
- - english
+ - English
 tags:
- - english
+ - English
 
 publish: true
 ---
